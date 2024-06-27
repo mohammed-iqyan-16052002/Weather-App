@@ -1,0 +1,118 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image:url('https://www.maketecheasier.com/assets/uploads/2021/11/Featured-Image-Live-Weather-Wallpapers-Android.jpg') ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+   backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.input {
+    margin-bottom: 20px;
+}
+
+.input input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.input input:focus {
+    border-color: #4facfe;
+    outline: none;
+}
+
+.input button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.input button:hover {
+    background-color: #fafafa;
+    transform: scale(1.05);
+    color: black;
+}
+
+h3, p {
+    margin: 10px 0;
+    color: #f4f3f3;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+h3 {
+    animation-delay: 0.2s;
+}
+
+p#temp {
+    font-size: 2em;
+    font-weight: bold;
+    animation-delay: 0.4s;
+}
+
+p#des {
+    font-style: italic;
+    color: rgb(217, 213, 213);
+    animation-delay: 0.6s;
+}
+
+p#speed {
+    animation-delay: 0.8s;
+}
+
+.loading {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #4facfe;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+body h1{
+    color: rgb(221, 219, 219);
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
